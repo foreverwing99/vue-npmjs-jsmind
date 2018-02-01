@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   import Vue from 'vue'
+  import jsDrag from '../../static/js/jsmind.draggable'
   import jsMind from '../../static/js/jsmind'
 
 export default {

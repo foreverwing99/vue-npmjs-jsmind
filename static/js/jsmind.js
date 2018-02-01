@@ -7,7 +7,7 @@
  */
 
 ;(function($w){
-    'use strict';       
+    'use strict';
     // set 'jsMind' as the library name.
     // __name__ should be a const value, Never try to change it easily.
     var __name__ = 'jsMind';
@@ -68,7 +68,7 @@
             handles:{
             },
             mapping:{
-                addchild   : 45, // Insert
+                addchild   : 9, // Insert
                 addbrother : 13, // Enter
                 editnode   : 113,// F2
                 delnode    : 46, // Delete
