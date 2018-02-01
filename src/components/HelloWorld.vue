@@ -9,7 +9,7 @@
 <script type="text/javascript">
   import Vue from 'vue'
   import jsMind from '../../static/js/jsmind';
-  import drag from '../../static/js/jsmind.draggable';
+  import jsDrag from '../../static/js/jsmind.draggable';
 
   export default {
   name: 'HelloWorld',
@@ -49,23 +49,16 @@
   methods: {
     load_jsmind : function (){
 
-    var jm = window.jsMind.show(this.options,this.mind);
+    var jm = jsMind.show(this.options,this.mind);
 
  /*     jm.add_node("sub2","sub23", "new node", {"background-color":"red"});
       jm.set_node_color('sub21', 'green', '#ccc');*/
-
-  }
-
+    }
   },
   mounted() {
-
     Vue.nextTick(() => {
-      window.jsMind = jsMind;
-      // drag(window);
-       this.load_jsmind();
-
+      this.load_jsmind();
     });
-
   }
 }
 </script>
