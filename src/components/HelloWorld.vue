@@ -8,10 +8,10 @@
 
 <script type="text/javascript">
   import Vue from 'vue'
-  import jsDrag from '../../static/js/jsmind.draggable'
-  import jsMind from '../../static/js/jsmind'
+  import jsMind from '../../static/js/jsmind';
+  import drag from '../../static/js/jsmind.draggable';
 
-export default {
+  export default {
   name: 'HelloWorld',
   data () {
     return {
@@ -49,23 +49,20 @@ export default {
   methods: {
     load_jsmind : function (){
 
-    var jm = jsMind.show(this.options,this.mind);
+    var jm = window.jsMind.show(this.options,this.mind);
 
-      jm.add_node("sub2","sub23", "new node", {"background-color":"red"});
-      jm.set_node_color('sub21', 'green', '#ccc');
+ /*     jm.add_node("sub2","sub23", "new node", {"background-color":"red"});
+      jm.set_node_color('sub21', 'green', '#ccc');*/
 
   }
 
   },
-  components:{
-    jsMind
-  },
   mounted() {
 
     Vue.nextTick(() => {
-      // var jm = new jsMind(this.options);
-      // jm.show(this.mind);
-      this.load_jsmind();
+      window.jsMind = jsMind;
+      // drag(window);
+       this.load_jsmind();
 
     });
 

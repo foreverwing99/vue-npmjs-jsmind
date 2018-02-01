@@ -68,7 +68,7 @@
             handles:{
             },
             mapping:{
-                addchild   : 9, // Insert
+                addchild   : 9, // Tab
                 addbrother : 13, // Enter
                 editnode   : 113,// F2
                 delnode    : 46, // Delete
@@ -2913,6 +2913,8 @@
 
     // export jsmind
     if (typeof module !== 'undefined' && typeof exports === 'object') {
+        //lina add
+        $w[__name__] = jm;
         module.exports = jm;
     } else if (typeof define === 'function' && (define.amd || define.cmd)) {
         define(function() { return jm; });
